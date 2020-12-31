@@ -85,7 +85,7 @@ describe("TimeBillingX menu test cases", function () {
       cy.get("input[class='_3j-re']").click();
       cy.get("button[class='_14oOZ']").click();
       cy.get("._3ro5q > .btn").click();
-      cy.wait(4000);
+      cy.wait(2000);
       cy.get("div[class='_3nBow _tABf']").contains("Johanna Palomino");
       cy.get("div[class='_3nBow _38PD9 _tABf']").should("not.be.disabled");
     });
