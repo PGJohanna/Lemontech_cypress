@@ -3,13 +3,13 @@ describe("Validate login", function () {
     Cypress.Cookies.debug(true);
     cy.fixture("util.json").as("utilData");
     cy.visit("/");
-    cy.clearCookies();
   });
 
   it("Validate correct login", function () {
     cy.get("@utilData").then((utilData) => {
       cy.loginUser(utilData.usuario, utilData.contraseña);
     });
+    cy.get("img").should("not.be.disabled");
   });
 
   it("Validate layout", function () {
